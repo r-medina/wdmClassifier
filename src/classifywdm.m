@@ -22,6 +22,6 @@ Header comments:
 
 function classifywdm
 
-classifybymag('dr4silv.csv','dr4psfstars.csv',[],[],[],'dr4wdmbinary')
+classifybymag('../data/dr4silv.csv','../data/dr4psfstars.csv',[],[],[],'dr4wdmbinary')
 
 end

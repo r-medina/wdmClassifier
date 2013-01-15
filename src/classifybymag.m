@@ -156,13 +156,13 @@ title('u-g vs. g-r vs. i-z')
 
 if ~isempty(X_unknown)
   [betas,conf_matrix,test_res,unkown_res] = logreg(X_train,Y_train,X_test,Y_test,X_unknown);
-  csvwrite(sprintf('%s_unknown.csv',csvtitle),unknown_res);
+  csvwrite(sprintf('../output/%s_unknown.csv',csvtitle),unknown_res);
 else
   [betas,conf_matrix,test_res] = logreg(X_train,Y_train,X_test,Y_test,X_unknown);
 end
 
-csvwrite(sprintf('%s_betas.csv',csvtitle),betas);
-csvwrite(sprintf('%s_testresults.csv',csvtitle),test_res);
+csvwrite(sprintf('../output/%s_betas.csv',csvtitle),betas);
+csvwrite(sprintf('.../output/%s_testresults.csv',csvtitle),test_res);
 
 betas
 conf_matrix
