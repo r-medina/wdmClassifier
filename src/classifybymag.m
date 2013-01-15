@@ -120,6 +120,7 @@ hold on;
 scatter3(X_train(num_ins+1:n_total,1),X_train(num_ins+1:n_total,2),X_train(num_ins+1:n_total,3),.3,'r','filled');
 axis([-4 4 -4 4 -4 4]);
 title('u-g vs. g-r vs. r-i');
+%saveas(af,'../graphs/uggrri.png');
 
 bf = figure;
 scatter3(X_train(1:num_ins,2),X_train(1:num_ins,3),X_train(1:num_ins,4),6,'k','filled');
@@ -127,20 +128,25 @@ hold on;
 scatter3(X_train(num_ins+1:n_total,2),X_train(num_ins+1:n_total,3),X_train(num_ins+1:n_total,4),.3,'r','filled');
 axis([-4 4 -4 4 -4 4]);
 title('g-r vs. r-i vs. i-z')
+%saveas(bf,'../graphs/grriiz.png');
 
 cf = figure;
 scatter3(X_train(1:num_ins,1),X_train(1:num_ins,3),X_train(1:num_ins,4),6,'k','filled');
 hold on;
 scatter3(X_train(num_ins+1:n_total,1),X_train(num_ins+1:n_total,3),X_train(num_ins+1:n_total,4),.3,'r','filled');
 axis([-4 4 -4 4 -4 4]);
-title('u-g vs. r-i vs. i-z')
+title('u-g vs. r-i vs. i-z');
+%saveas(cf,'../graphs/ugriiz.png');
 
 df = figure;
 scatter3(X_train(1:num_ins,1),X_train(1:num_ins,2),X_train(1:num_ins,4),6,'k','filled');
 hold on;
 scatter3(X_train(num_ins+1:n_total,1),X_train(num_ins+1:n_total,3),X_train(num_ins+1:n_total,4),.3,'r','filled');
 axis([-4 4 -4 4 -4 4]);
-title('u-g vs. g-r vs. i-z')
+title('u-g vs. g-r vs. i-z');
+%saveas(df,'../graphs/uggriz.png');
+
+%return;
 
 %[betas,conf_matrix] = logreg(X_train,Y_train,X_test,Y_test,X_unknown)
 
@@ -162,7 +168,7 @@ else
 end
 
 csvwrite(sprintf('../output/%s_betas.csv',csvtitle),betas);
-csvwrite(sprintf('.../output/%s_testresults.csv',csvtitle),test_res);
+csvwrite(sprintf('../output/%s_testresults.csv',csvtitle),test_res);
 
 betas
 conf_matrix

@@ -1,7 +1,7 @@
 An attempt at building a white dwarf-m dwarf binary classifier based on psf
-magnitudes using logistic regression. See proposal.pdf for a detailed
+magnitudes using logistic regression (MATLAB). See proposal.pdf for a detailed
 description of the goals of the project. 
 
-run classifywdm in MATLAB.
+run classifywdm (in src/) in MATLAB.
 
 Extensive documentation in the .m files.
