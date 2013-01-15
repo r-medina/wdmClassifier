@@ -1,1 +1,7 @@
-run classifywdm in Matlab. Extensive documentation in the .m files.
+An attempt at building a white dwarf-m dwarf classifier based on psf
+magnitudes using logistic regression. See proposal.pdf for a detailed
+description of the goals of the project. 
+
+run classifywdm in Matlab.
+
+Extensive documentation in the .m files.
